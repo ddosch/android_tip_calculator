@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" 
+    android:background="@drawable/table_bg" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/guestCheck"
+        android:src="@drawable/guest_check" />
+
+    <EditText
+        android:id="@+id/etSubtotal"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="63dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/guestCheckHint"
+        android:textSize="13sp"
+        android:inputType="numberDecimal"
+        android:windowSoftInputMode="stateVisible"
+        android:ems="10" >
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnTenPercent"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginLeft="38dp"
+        android:text="@string/percent_10"
+        android:onClick="calculateTip"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btnFifteenPercent"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/btnTenPercent"
+        android:layout_alignBottom="@+id/btnTenPercent"
+        android:layout_centerHorizontal="true"
+        android:text="@string/percent_15"
+        android:onClick="calculateTip"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btnTwentyPercent"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/btnFifteenPercent"
+        android:layout_alignBottom="@+id/btnFifteenPercent"
+        android:layout_alignLeft="@+id/etSubtotal"
+        android:layout_marginLeft="10dp"
+        android:text="@string/percent_20"
+        android:onClick="calculateTip"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnTwentyPercent"
+        android:layout_alignRight="@+id/imageView1"
+        android:layout_alignTop="@+id/etSubtotal"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvTip"
+        android:layout_alignRight="@+id/imageView1"
+        android:layout_below="@+id/tvTip"
+        android:layout_marginTop="3dp"/>
+
+</RelativeLayout>
