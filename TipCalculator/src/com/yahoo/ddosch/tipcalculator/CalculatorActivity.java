@@ -27,6 +27,7 @@ public class CalculatorActivity extends Activity {
         etSubtotal.addTextChangedListener(getSubtotalChangeWatcher());
         final InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.showSoftInput(etSubtotal, InputMethodManager.SHOW_IMPLICIT);
+        etSubtotal.requestFocusFromTouch();
         
         calculateTip(null);
     }
