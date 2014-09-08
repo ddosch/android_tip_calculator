@@ -13,10 +13,11 @@ Completed user stories:
  * [x] Optional: User changes the total amount and updated tip is reflected automatically
  * [ ] Optional: User can select custom tip percentage if desired
  * [ ] Optional: User can select how many ways to split the tip
- * [ ] Optional: User can edit preset tip percentages and have them persist across launches
+ * [x] Optional: Tip selection persists across launches
  * [ ] Optional: Experiment with trying input widgets to replace the buttons and/or textviews
  * [x] Optional: Improve the user interface and experience by using images and/or colors
  
+
 Walkthrough of all user stories:
 
 ![Video Walkthrough](demo.gif)
